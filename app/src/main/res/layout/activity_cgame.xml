@@ -133,7 +133,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/amaranth"
+        android:fontFamily="@font/audiowide"
         android:text="Choose your Level"
         android:textAllCaps="true"
         android:textColor="@color/white"
