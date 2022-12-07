@@ -13,7 +13,6 @@ import com.example.concentration.R;
 
 public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
 
-    public Object isMatched;
     protected int row;
     protected int column;
     protected int frontDrawableId;
@@ -46,7 +45,7 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public boolean isMatched() {
-        return (boolean) isMatched;
+        return isMatched;
     }
 
     public void setMatched(boolean matched) {
@@ -58,7 +57,7 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public void flip() {
-        if((boolean) isMatched)
+        if(isMatched)
             return;
 
         if(isFlipped)
@@ -74,9 +73,9 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_memory_button);
-    }
+    //@Override
+    //protected void onCreate(Bundle savedInstanceState) {
+        //super.onCreate(savedInstanceState);
+        //setContentView(R.layout.activity_memory_button);
+    //}
 }
