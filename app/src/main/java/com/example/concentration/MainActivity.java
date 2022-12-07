@@ -32,6 +32,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        hsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+            }
+        });
+
         MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.music);
         music.start();
     }
@@ -46,5 +53,10 @@ public class MainActivity extends AppCompatActivity {
         }, 5000);
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);
+    }
+
+    public void openActivity3() {
+            Intent intent = new Intent(this, Highscore.class);
+            startActivity(intent);
     }
 }
