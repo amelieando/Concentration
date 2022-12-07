@@ -4,23 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A1157BE6"
+    android:background="@drawable/bg"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/titleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#000000"
         android:fontFamily="sans-serif-black"
-        android:foregroundTint="@color/black"
+        android:foregroundTint="#FDFDFD"
         android:text="CONCENTRATION"
         android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/black"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.251" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <Button
         android:id="@+id/playBtn"
@@ -30,9 +34,10 @@
         android:text="PLAY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.657" />
 
     <Button
         android:id="@+id/hsBtn"
@@ -56,6 +61,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.448" />
+        app:layout_constraintVertical_bias="0.454" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
