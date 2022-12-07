@@ -31,8 +31,8 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
         column = c;
         frontDrawableId = frontImageDrawableId;
 
-        front = AppCompatDrawableManager.get().getDrawable(context, frontImageDrawableId;)
-        back = AppCompatDrawableManager.get().getDrawable(context.R.drawable.dum);
+        front = AppCompatDrawableManager.get().getDrawable(context, frontImageDrawableId);
+        back = AppCompatDrawableManager.get().getDrawable(context, R.drawable.dum);
 
         setBackground(back);
 
