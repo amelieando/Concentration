@@ -8,7 +8,20 @@
     tools:context=".cGame">
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttonBack"
+        android:layout_width="203dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="636dp"
+        android:layout_marginEnd="1dp"
+        android:text="Back"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button28"
         android:layout_width="410dp"
         android:layout_height="64dp"
         android:layout_marginEnd="1dp"
