@@ -9,6 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.GridLayout;
+import com.georgelecakes.memorygame.R;
 
 public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
 
@@ -17,6 +18,11 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
     protected int column;
     protected int frontDrawableId;
 
+    protected boolean isFlipped = false;
+    protected boolean isMatched = false;
+    protected Drawable front;
+    protected Drawable back;
+
     @SuppressLint("RestrictedApi")
     public MemoryButton(Context context, int r, int c, int frontImageDrawableId)
     {
@@ -24,10 +30,10 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
 
         row = r;
         column = c;
-        frontImageDrawableId = frontImageDrawableId;
+        frontDrawableId = frontImageDrawableId;
 
-        Drawable front = AppCompatDrawableManager.get().getDrawable(context, frontImageDrawableId;)
-        Drawable back = AppCompatDrawableManager.get().getDrawable(context.R.drawable.dum);
+        front = AppCompatDrawableManager.get().getDrawable(context, frontImageDrawableId;)
+        back = AppCompatDrawableManager.get().getDrawable(context.R.drawable.dum);
 
         setBackground(back);
 
