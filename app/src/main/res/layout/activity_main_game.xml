@@ -8,49 +8,12 @@
     android:background="@drawable/bg"
     >
 
-    <Button
-        android:id="@+id/custom_button3"
-        android:layout_width="86dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="388dp"
-        android:foreground="@drawable/dum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/custom_button4"
-        android:layout_width="86dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="388dp"
-        android:foreground="@drawable/dum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.643"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/custom_button2"
-        android:layout_width="86dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="264dp"
-        android:foreground="@drawable/dum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.643"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/custom_button"
-        android:layout_width="86dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="264dp"
-        android:foreground="@drawable/dum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridView"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
