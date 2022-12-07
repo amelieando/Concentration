@@ -29,7 +29,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game4x4);
 
-        GridLayout gridLayout = (GridLayout) findViewById(R.id.game4x4);
+        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game4x4);
 
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
