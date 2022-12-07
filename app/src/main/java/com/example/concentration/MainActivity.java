@@ -76,8 +76,6 @@ public class MainActivity extends AppCompatActivity {
         button4x4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, game4x4.class);
-                startActivity(intent);
                 button4x4.setVisibility(View.GONE);
                 button4x4_6.setVisibility(View.GONE);
                 button4x4_8.setVisibility(View.GONE);
@@ -87,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 button4x4_16.setVisibility(View.GONE);
                 button4x4_18.setVisibility(View.GONE);
                 button4x4_20.setVisibility(View.GONE);
+                openActivity4();
+                music.stop();
             }
         });
 
@@ -96,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void openActivity3() {
             Intent intent = new Intent(this, Highscore.class);
+            startActivity(intent);
+    }
+    public void openActivity4() {
+            Intent intent = new Intent(this, game4x4.class);
             startActivity(intent);
     }
 }
