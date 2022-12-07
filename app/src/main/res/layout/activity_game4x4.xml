@@ -7,6 +7,8 @@
     tools:context=".game4x4"
     android:id="@+id/game4x4"
     android:columnCount="4"
+    android:layout_column="4"
+    android:layout_row="4"
     android:rowCount="4">
 
 </GridLayout>
