@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
+import android.os.Handler;
 
 import java.util.Random;
 
@@ -21,7 +22,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
 
-    private boolean isBUsy = false;
+    private boolean isBusy = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +93,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
 
         MemoryButton button = (MemoryButton) view;
 
-        it(button.isMatched)
+        if(button.isMatched)
             return;
 
         if(selectedButton1 == null)
@@ -106,15 +107,15 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
             return;
         }
 
-        if(SelectedButton1.getFrontDrawableId() == button.getFrontDrawableId())
+        if(selectedButton1.getFrontDrawableId() == button.getFrontDrawableId())
         {
             button.flip();
 
             button.setMatched(true);
             selectedButton1.setMatched(true);
 
-            selectedButton1.setEnabled[false];
-            selectedButton2.setEnabled[false];
+            selectedButton1.setEnabled(false);
+            selectedButton2.setEnabled(false);
 
             selectedButton1 = null;
 

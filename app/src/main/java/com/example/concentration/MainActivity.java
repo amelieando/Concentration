@@ -13,6 +13,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private Button playBtn;
     private Button hsBtn;
+    MediaPlayer music = new MediaPlayer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 hsBtn.setVisibility(View.GONE);
                 amogUs.setVisibility(View.VISIBLE);
                 openActivity2();
+                music.stop();
             }
         });
 
@@ -36,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openActivity3();
+                music.stop();
             }
         });
 
-        MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.music);
+        music = MediaPlayer.create(MainActivity.this, R.raw.music);
         music.start();
     }
 
