@@ -38,7 +38,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
 
         buttons = new MemoryButton[numberOfElements];
 
-        buttonGraphics = new int[numberOfElements / 2];
+        buttonGraphics = new int[(numberOfElements / 2)+1];
 
         buttonGraphics[0] = R.drawable.among_us_batman;
         buttonGraphics[1] = R.drawable.among_us_black_hat_blue;
