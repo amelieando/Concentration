@@ -13,17 +13,6 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private Button playBtn;
     private Button hsBtn;
-    /*
-    private Button button4x4;
-    private Button button4x4_6;
-    private Button button4x4_8;
-    private Button button4x4_10;
-    private Button button4x4_12;
-    private Button button4x4_14;
-    private Button button4x4_16;
-    private Button button4x4_18;
-    private Button button4x4_20;
-     */
     MediaPlayer music = new MediaPlayer();
 
     @Override
@@ -65,36 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, cGame.class));
             }
         }, 5000);
-        /*
-        button4x4 = (Button)findViewById(R.id.button4);
-        button4x4_6 = (Button)findViewById(R.id.button6);
-        button4x4_8 = (Button)findViewById(R.id.button8);
-        button4x4_10 = (Button)findViewById(R.id.button10);
-        button4x4_12 = (Button)findViewById(R.id.button12);
-        button4x4_14 = (Button)findViewById(R.id.button14);
-        button4x4_16 = (Button)findViewById(R.id.button16);
-        button4x4_18 = (Button)findViewById(R.id.button18);
-        button4x4_20 = (Button)findViewById(R.id.button20);
-
-        button4x4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                openActivity4();
-                music.stop();
-            }
-        });
-
-
-         */
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);
     }
@@ -103,9 +62,4 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Highscore.class);
             startActivity(intent);
     }
-    public void openActivity4() {
-            Intent intent = new Intent(this, game4x4.class);
-            startActivity(intent);
-    }
-
 }
