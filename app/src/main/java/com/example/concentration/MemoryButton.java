@@ -9,7 +9,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.GridLayout;
-import com.georgelecakes.memorygame.R;
+import com.example.concentration.R;
 
 public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
 
@@ -58,7 +58,7 @@ public class MemoryButton extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public void flip() {
-        if(isMatched)
+        if((boolean) isMatched)
             return;
 
         if(isFlipped)
