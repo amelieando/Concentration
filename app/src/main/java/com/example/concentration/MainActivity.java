@@ -13,6 +13,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private Button playBtn;
     private Button hsBtn;
+    private Button button4x4;
     MediaPlayer music = new MediaPlayer();
 
     @Override
@@ -54,6 +55,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, cGame.class));
             }
         }, 5000);
+        button4x4 = (Button)findViewById(R.id.button4);
+
+        button4x4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, game4x4.class);
+                startActivity(intent);
+            }
+        });
+
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);
     }
