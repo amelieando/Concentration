@@ -13,6 +13,7 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private Button playBtn;
     private Button hsBtn;
+
     MediaPlayer music = new MediaPlayer();
 
     @Override
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, cGame.class));
             }
         }, 5000);
+
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);
     }
