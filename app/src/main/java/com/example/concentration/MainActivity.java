@@ -47,5 +47,4 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);
     }
-    
 }
