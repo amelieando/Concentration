@@ -12,8 +12,6 @@ import android.widget.Button;
 public class cGame extends AppCompatActivity {
     private Button buttonBack;
     MediaPlayer music = new MediaPlayer();
-    private Button playBtn;
-    private Button hsBtn;
     private Button button4x4;
     private Button button4x4_6;
     private Button button4x4_8;
