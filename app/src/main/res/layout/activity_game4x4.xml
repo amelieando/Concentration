@@ -13,6 +13,6 @@
     android:columnCount="4"
     android:layout_column="4"
     android:layout_row="4"
-    android:rowCount="4">
+    android:rowCount="5">
 
 </GridLayout>
