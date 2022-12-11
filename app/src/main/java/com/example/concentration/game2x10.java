@@ -144,7 +144,7 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
             if (score > 0){
                 score = score -1;
                 pScore.setText("Score: " + getScore());
-            }
+        }
 
             final Handler handler = new Handler();
 

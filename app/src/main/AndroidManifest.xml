@@ -83,6 +83,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".game2x10"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".mainGame"
             android:exported="false">
             <meta-data
