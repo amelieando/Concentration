@@ -1,7 +1,8 @@
 package com.example.concentration;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,7 @@ import android.os.Handler;
 
 import java.util.Random;
 
-public class game4x4 extends AppCompatActivity implements View.OnClickListener {
-
+public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     private int numberOfElements;
 
     private MemoryButton[] buttons;
@@ -27,9 +27,9 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game4x4);
+        setContentView(R.layout.activity_game2x2);
 
-        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game4x4);
+        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x2);
 
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
@@ -38,18 +38,10 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
 
         buttons = new MemoryButton[numberOfElements];
 
-        buttonGraphics = new int[(numberOfElements / 2)+1];
+        buttonGraphics = new int[(numberOfElements / 2)];
 
         buttonGraphics[0] = R.drawable.among_us_batman;
         buttonGraphics[1] = R.drawable.among_us_black_hat_blue;
-        buttonGraphics[2] = R.drawable.among_us_doctor_brown;
-        buttonGraphics[3] = R.drawable.among_us_halo;
-        buttonGraphics[4] = R.drawable.among_us_picture_blue_6;
-        buttonGraphics[5] = R.drawable.among_us_pumpkin_hat_white;
-        buttonGraphics[6] = R.drawable.among_us_rainbow;
-        buttonGraphics[7] = R.drawable.among_us_space;
-        buttonGraphics[8] = R.drawable.among_us_teanage_yellow;
-        buttonGraphics[9] = R.drawable.banana_hat_with_among_us;
 
         buttonGraphicLocations = new int[numberOfElements];
 
@@ -77,7 +69,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(16);
+            int swapIndex = rand.nextInt(4);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
@@ -115,8 +107,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
             button.setMatched(true);
             selectedButton1.setMatched(true);
 
-            selectedButton1.setEnabled(false);
-            selectedButton2.setEnabled(false);
+
 
             selectedButton1 = null;
 
