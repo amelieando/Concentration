@@ -22,8 +22,6 @@ public class cGame extends AppCompatActivity {
     private Button button4x4_18;
     private Button button4x4_20;
     private Button Backbutton;
-
-
     MediaPlayer music = new MediaPlayer();
 
     @SuppressLint("MissingInflatedId")
