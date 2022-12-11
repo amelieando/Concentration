@@ -57,7 +57,142 @@ public class cGame extends AppCompatActivity {
                 music.stop();
             }
         });
-
+        button4x4_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity5();
+                music.stop();
+            }
+        });
+        button4x4_8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity6();
+                music.stop();
+            }
+        });
+        button4x4_10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity7();
+                music.stop();
+            }
+        });
+        button4x4_12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity8();
+                music.stop();
+            }
+        });
+        button4x4_14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity9();
+                music.stop();
+            }
+        });
+        button4x4_16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity10();
+                music.stop();
+            }
+        });
+        button4x4_18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity11();
+                music.stop();
+            }
+        });
+        button4x4_20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                button4x4.setVisibility(View.GONE);
+                button4x4_6.setVisibility(View.GONE);
+                button4x4_8.setVisibility(View.GONE);
+                button4x4_10.setVisibility(View.GONE);
+                button4x4_12.setVisibility(View.GONE);
+                button4x4_14.setVisibility(View.GONE);
+                button4x4_16.setVisibility(View.GONE);
+                button4x4_18.setVisibility(View.GONE);
+                button4x4_20.setVisibility(View.GONE);
+                Backbutton.setVisibility(View.GONE);
+                openActivity12();
+                music.stop();
+            }
+        });
         buttonBack = (Button) findViewById(R.id.buttonBack);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -74,7 +209,7 @@ public class cGame extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity2() {
-        Intent intent = new Intent(this, game4x4.class);
+        Intent intent = new Intent(this, game2x2.class);
         startActivity(intent);
     }
     public void openActivity3() {
@@ -83,6 +218,38 @@ public class cGame extends AppCompatActivity {
     }
     public void openActivity4() {
         Intent intent = new Intent(this, test.class);
+        startActivity(intent);
+    }
+    public void openActivity5() {
+        Intent intent = new Intent(this, game2x3.class);
+        startActivity(intent);
+    }
+    public void openActivity6() {
+        Intent intent = new Intent(this, game2x4.class);
+        startActivity(intent);
+    }
+    public void openActivity7() {
+        Intent intent = new Intent(this, game2x5.class);
+        startActivity(intent);
+    }
+    public void openActivity8() {
+        Intent intent = new Intent(this, game2x6.class);
+        startActivity(intent);
+    }
+    public void openActivity9() {
+        Intent intent = new Intent(this, game2x7.class);
+        startActivity(intent);
+    }
+    public void openActivity10() {
+        Intent intent = new Intent(this, game2x8.class);
+        startActivity(intent);
+    }
+    public void openActivity11() {
+        Intent intent = new Intent(this, game2x9.class);
+        startActivity(intent);
+    }
+    public void openActivity12() {
+        Intent intent = new Intent(this, game4x4.class);
         startActivity(intent);
     }
 }
