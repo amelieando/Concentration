@@ -22,7 +22,9 @@ public class game2x9 extends AppCompatActivity implements View.OnClickListener {
     private MemoryButton selectedButton2;
 
     private boolean isBusy = false;
-
+    private int getScore(){
+        return score;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
