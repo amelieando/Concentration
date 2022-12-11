@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.os.Handler;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -19,6 +20,8 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
 
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
+
+    TextView pScore;
 
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
@@ -39,6 +42,9 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
         score = 0;
         numberOfElements = numColumns * numRows;
 
+        pScore = (TextView) findViewById(R.id.playerScore);
+        pScore.setText("Score: " + getScore());
+
         buttons = new MemoryButton[numberOfElements];
 
         buttonGraphics = new int[(numberOfElements / 2)+1];
@@ -49,7 +55,6 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
         buttonGraphics[3] = R.drawable.among_us_halo;
         buttonGraphics[4] = R.drawable.among_us_picture_blue_6;
         buttonGraphics[5] = R.drawable.among_us_pumpkin_hat_white;
-        buttonGraphics[6] = R.drawable.among_us_rainbow;
 
         buttonGraphicLocations = new int[numberOfElements];
 
@@ -77,7 +82,7 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(20);
+            int swapIndex = rand.nextInt(12);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
@@ -117,6 +122,7 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
             score = score +2;
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
+            pScore.setText("Score: " + getScore());
             nullcount = nullcount +2;
             selectedButton1 = null;
             if (nullcount == 12){
@@ -133,7 +139,9 @@ public class game2x6 extends AppCompatActivity implements View.OnClickListener {
             isBusy = true;
             if (score > 0){
                 score = score -1;
+                pScore.setText("Score: " + getScore());
             }
+
             final Handler handler = new Handler();
 
             handler.postDelayed(new Runnable() {

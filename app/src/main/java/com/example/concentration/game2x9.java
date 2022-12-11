@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.os.Handler;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -20,6 +21,8 @@ public class game2x9 extends AppCompatActivity implements View.OnClickListener {
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
 
+    TextView pScore;
+
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
 
@@ -31,13 +34,16 @@ public class game2x9 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2x9);
-        score = 0;
+
         GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x9);
 
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
-
+        score = 0;
         numberOfElements = numColumns * numRows;
+
+        pScore = (TextView) findViewById(R.id.playerScore);
+        pScore.setText("Score: " + getScore());
 
         buttons = new MemoryButton[numberOfElements];
 
@@ -116,9 +122,10 @@ public class game2x9 extends AppCompatActivity implements View.OnClickListener {
 
             button.setMatched(true);
             selectedButton1.setMatched(true);
-            score = score + 2;
+            score = score +2;
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
+            pScore.setText("Score: " + getScore());
             nullcount = nullcount +2;
             selectedButton1 = null;
             if (nullcount == 18){
@@ -135,7 +142,9 @@ public class game2x9 extends AppCompatActivity implements View.OnClickListener {
             isBusy = true;
             if (score > 0){
                 score = score -1;
+                pScore.setText("Score: " + getScore());
             }
+
             final Handler handler = new Handler();
 
             handler.postDelayed(new Runnable() {
