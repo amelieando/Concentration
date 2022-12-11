@@ -2,7 +2,6 @@ package com.example.concentration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
@@ -13,7 +12,6 @@ import java.util.Random;
 public class game2x3 extends AppCompatActivity implements View.OnClickListener {
     private int score;
     private int numberOfElements;
-    private int nullcount;
 
     private MemoryButton[] buttons;
 
@@ -111,13 +109,10 @@ public class game2x3 extends AppCompatActivity implements View.OnClickListener {
             button.setMatched(true);
             selectedButton1.setMatched(true);
             score = score +2;
-            nullcount = nullcount +2;
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
+
             selectedButton1 = null;
-            if (nullcount == 6){
-                openActivity1();
-            }
 
             return;
         }
@@ -129,7 +124,6 @@ public class game2x3 extends AppCompatActivity implements View.OnClickListener {
             isBusy = true;
             if (score > 0){
                 score = score -1;
-
             }
             final Handler handler = new Handler();
 
@@ -145,9 +139,5 @@ public class game2x3 extends AppCompatActivity implements View.OnClickListener {
             }, 500);
         }
 
-    }
-    public void openActivity1() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 }
