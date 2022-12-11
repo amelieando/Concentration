@@ -3,11 +3,14 @@ package com.example.concentration;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 
 
 public class cGame extends AppCompatActivity {
@@ -22,6 +25,8 @@ public class cGame extends AppCompatActivity {
     private Button button4x4_18;
     private Button button4x4_20;
     private Button Backbutton;
+    private Switch switch2;
+    private boolean IsAudioOn;
     MediaPlayer music = new MediaPlayer();
 
     @SuppressLint("MissingInflatedId")
@@ -43,16 +48,6 @@ public class cGame extends AppCompatActivity {
         button4x4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
                 openActivity2();
                 music.stop();
             }
@@ -60,16 +55,7 @@ public class cGame extends AppCompatActivity {
         button4x4_6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity5();
                 music.stop();
             }
@@ -77,16 +63,7 @@ public class cGame extends AppCompatActivity {
         button4x4_8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity6();
                 music.stop();
             }
@@ -94,16 +71,7 @@ public class cGame extends AppCompatActivity {
         button4x4_10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity7();
                 music.stop();
             }
@@ -111,16 +79,7 @@ public class cGame extends AppCompatActivity {
         button4x4_12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity8();
                 music.stop();
             }
@@ -128,16 +87,7 @@ public class cGame extends AppCompatActivity {
         button4x4_14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity9();
                 music.stop();
             }
@@ -145,16 +95,7 @@ public class cGame extends AppCompatActivity {
         button4x4_16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity10();
                 music.stop();
             }
@@ -162,16 +103,7 @@ public class cGame extends AppCompatActivity {
         button4x4_18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity11();
                 music.stop();
             }
@@ -179,16 +111,7 @@ public class cGame extends AppCompatActivity {
         button4x4_20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                button4x4.setVisibility(View.GONE);
-                button4x4_6.setVisibility(View.GONE);
-                button4x4_8.setVisibility(View.GONE);
-                button4x4_10.setVisibility(View.GONE);
-                button4x4_12.setVisibility(View.GONE);
-                button4x4_14.setVisibility(View.GONE);
-                button4x4_16.setVisibility(View.GONE);
-                button4x4_18.setVisibility(View.GONE);
-                button4x4_20.setVisibility(View.GONE);
-                Backbutton.setVisibility(View.GONE);
+
                 openActivity12();
                 music.stop();
             }
@@ -200,6 +123,23 @@ public class cGame extends AppCompatActivity {
                 music.stop();
             }
         });
+        switch2 = (Switch)findViewById(R.id.switch2);
+        switch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AudioManager amanager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+
+                if(IsAudioOn){
+                    IsAudioOn = false;
+                    amanager.setStreamMute(AudioManager.STREAM_MUSIC, false); // for unmute
+
+                }else{
+                    IsAudioOn = true;
+                    amanager.setStreamMute(AudioManager.STREAM_MUSIC, true);  //for mute
+                }
+            }
+        });
+
         music = MediaPlayer.create(cGame.this, R.raw.music);
         music.start();
     }
@@ -249,7 +189,7 @@ public class cGame extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity12() {
-        Intent intent = new Intent(this, game4x4.class);
+        Intent intent = new Intent(this, game2x10.class);
         startActivity(intent);
     }
 }
