@@ -3,11 +3,14 @@ package com.example.concentration;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 
 
 public class cGame extends AppCompatActivity {
@@ -22,6 +25,8 @@ public class cGame extends AppCompatActivity {
     private Button button4x4_18;
     private Button button4x4_20;
     private Button Backbutton;
+    private Switch switch2;
+    private boolean IsAudioOn;
     MediaPlayer music = new MediaPlayer();
 
     @SuppressLint("MissingInflatedId")
@@ -118,6 +123,23 @@ public class cGame extends AppCompatActivity {
                 music.stop();
             }
         });
+        switch2 = (Switch)findViewById(R.id.switch2);
+        switch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AudioManager amanager = (AudioManager)getSystemService(Context.AUDIO_SERVICE);
+
+                if(IsAudioOn){
+                    IsAudioOn = false;
+                    amanager.setStreamMute(AudioManager.STREAM_MUSIC, false); // for unmute
+
+                }else{
+                    IsAudioOn = true;
+                    amanager.setStreamMute(AudioManager.STREAM_MUSIC, true);  //for mute
+                }
+            }
+        });
+
         music = MediaPlayer.create(cGame.this, R.raw.music);
         music.start();
     }
