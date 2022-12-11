@@ -7,19 +7,6 @@
     android:background="@drawable/bg"
     tools:context=".MainActivity">
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/amog"
-        android:layout_width="113dp"
-        android:layout_height="99dp"
-        android:adjustViewBounds="false"
-        android:src="@drawable/am"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
     <TextView
         android:id="@+id/titleName"
         android:layout_width="wrap_content"
@@ -38,7 +25,20 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.19" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/amog"
+        android:layout_width="113dp"
+        android:layout_height="99dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/am"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41" />
 
     <Button
         android:id="@+id/playBtn"
@@ -50,7 +50,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.662" />
+        app:layout_constraintVertical_bias="0.695" />
 
     <Button
         android:id="@+id/hsBtn"
@@ -62,7 +62,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.905" />
+        app:layout_constraintVertical_bias="0.955" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#673AB7"
+        android:text="Music Off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
