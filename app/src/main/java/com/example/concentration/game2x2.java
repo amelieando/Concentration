@@ -1,5 +1,6 @@
 package com.example.concentration;
 
+import android.content.Intent;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,7 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     private int numberOfElements;
     private int score;
     private MemoryButton[] buttons;
+    private int nullcount;
 
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
@@ -109,9 +111,12 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
             button.setMatched(true);
             selectedButton1.setMatched(true);
             score = score +2;
-
-
+            nullcount = nullcount +2;
             selectedButton1 = null;
+            if (nullcount == 8){
+                openActivity1();
+            }
+
 
             return;
         }
@@ -138,5 +143,9 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
             }, 500);
         }
 
+    }
+    public void openActivity1() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
