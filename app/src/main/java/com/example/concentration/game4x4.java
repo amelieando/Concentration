@@ -115,8 +115,8 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
             button.setMatched(true);
             selectedButton1.setMatched(true);
 
-            selectedButton1.setEnabled(false);
-            selectedButton2.setEnabled(false);
+            //selectedButton1.setEnabled(false);
+            //selectedButton2.setEnabled(false);
 
             selectedButton1 = null;
 
