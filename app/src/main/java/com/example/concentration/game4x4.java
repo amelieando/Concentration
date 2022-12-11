@@ -38,7 +38,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
 
         buttons = new MemoryButton[numberOfElements];
 
-        buttonGraphics = new int[(numberOfElements / 2)+1];
+        buttonGraphics = new int[(numberOfElements / 2)];
 
         buttonGraphics[0] = R.drawable.among_us_batman;
         buttonGraphics[1] = R.drawable.among_us_black_hat_blue;
@@ -77,7 +77,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(16);
+            int swapIndex = rand.nextInt(20);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
@@ -106,7 +106,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
         if(selectedButton1.getId() == button.getId())
         {
             return;
-        }
+    }
 
         if(selectedButton1.getFrontDrawableId() == button.getFrontDrawableId())
         {
@@ -115,8 +115,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
             button.setMatched(true);
             selectedButton1.setMatched(true);
 
-            selectedButton1.setEnabled(false);
-            selectedButton2.setEnabled(false);
+
 
             selectedButton1 = null;
 
