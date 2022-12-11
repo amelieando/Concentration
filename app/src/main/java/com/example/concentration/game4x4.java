@@ -2,46 +2,39 @@ package com.example.concentration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.os.Handler;
-import android.widget.TextView;
 
 import java.util.Random;
 
-public class game2x10 extends AppCompatActivity implements View.OnClickListener {
+public class game4x4 extends AppCompatActivity implements View.OnClickListener {
 
     private int numberOfElements;
-    private int score;
+
     private MemoryButton[] buttons;
 
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
 
-    TextView pScore;
-
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
 
     private boolean isBusy = false;
-    private int getScore(){
-        return score;
-    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game2x10);
+        setContentView(R.layout.activity_game4x4);
 
-        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x10);
+        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game4x4);
 
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
-        score = 0;
-        numberOfElements = numColumns * numRows;
 
-        pScore = (TextView) findViewById(R.id.playerScore);
-        pScore.setText("Score: " + getScore());
+        numberOfElements = numColumns * numRows;
 
         buttons = new MemoryButton[numberOfElements];
 
@@ -84,7 +77,7 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(20);
+            int swapIndex = rand.nextInt(16);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
@@ -121,10 +114,9 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
 
             button.setMatched(true);
             selectedButton1.setMatched(true);
-            score = score +2;
+
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
-            pScore.setText("Score: " + getScore());
 
             selectedButton1 = null;
 
@@ -136,10 +128,6 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
             selectedButton2 = button;
             selectedButton2.flip();
             isBusy = true;
-            if (score > 0){
-                score = score -1;
-                pScore.setText("Score: " + getScore());
-        }
 
             final Handler handler = new Handler();
 
