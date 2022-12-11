@@ -113,7 +113,7 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
             score = score +2;
             nullcount = nullcount +2;
             selectedButton1 = null;
-            if (nullcount == 8){
+            if (nullcount == 4){
                 openActivity1();
             }
 
