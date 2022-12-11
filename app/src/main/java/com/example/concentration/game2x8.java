@@ -57,8 +57,6 @@ public class game2x8 extends AppCompatActivity implements View.OnClickListener {
         buttonGraphics[5] = R.drawable.among_us_pumpkin_hat_white;
         buttonGraphics[6] = R.drawable.among_us_rainbow;
         buttonGraphics[7] = R.drawable.among_us_space;
-        buttonGraphics[8] = R.drawable.among_us_teanage_yellow;
-        buttonGraphics[9] = R.drawable.banana_hat_with_among_us;
 
         buttonGraphicLocations = new int[numberOfElements];
 
