@@ -83,13 +83,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".game4x4"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".mainGame"
             android:exported="false">
             <meta-data
