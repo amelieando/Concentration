@@ -64,4 +64,5 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Highscore.class);
             startActivity(intent);
     }
+
 }
