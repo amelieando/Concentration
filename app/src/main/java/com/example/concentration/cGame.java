@@ -74,7 +74,7 @@ public class cGame extends AppCompatActivity {
         startActivity(intent);
     }
     public void openActivity2() {
-        Intent intent = new Intent(this, game2x2.class);
+        Intent intent = new Intent(this, game4x4.class);
         startActivity(intent);
     }
     public void openActivity3() {
