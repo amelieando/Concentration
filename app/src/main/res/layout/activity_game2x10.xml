@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".game4x4">
+    tools:context=".game2x10">
 
     <GridLayout
-        android:id="@+id/Game4x4"
+        android:id="@+id/Game2x10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="4"

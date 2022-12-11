@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(MainActivity.this, cGame.class));
             }
-        }, 5000);
+        }, 4000);
 
         //Intent intent = new Intent(this, cGame.class);
         //startActivity(intent);

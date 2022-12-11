@@ -2,7 +2,6 @@ package com.example.concentration;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
@@ -10,7 +9,7 @@ import android.os.Handler;
 
 import java.util.Random;
 
-public class game4x4 extends AppCompatActivity implements View.OnClickListener {
+public class game2x10 extends AppCompatActivity implements View.OnClickListener {
 
     private int numberOfElements;
 
@@ -27,9 +26,9 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game4x4);
+        setContentView(R.layout.activity_game2x10);
 
-        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game4x4);
+        GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x10);
 
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
@@ -77,7 +76,7 @@ public class game4x4 extends AppCompatActivity implements View.OnClickListener {
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(16);
+            int swapIndex = rand.nextInt(20);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
