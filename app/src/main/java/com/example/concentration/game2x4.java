@@ -7,20 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
 import android.os.Handler;
-
-import com.example.concentration.MemoryButton;
-import com.example.concentration.R;
+import android.widget.TextView;
 
 import java.util.Random;
 
 public class game2x4 extends AppCompatActivity implements View.OnClickListener {
-    private int score;
+
     private int numberOfElements;
-    private int nullcount;
+    private int score;
     private MemoryButton[] buttons;
+    private int nullcount;
 
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
+
+    TextView pScore;
 
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
@@ -35,11 +36,14 @@ public class game2x4 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_game2x4);
 
         GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x4);
-        score = 0;
+
         int numColumns = gridLayout.getColumnCount();
         int numRows = gridLayout.getRowCount();
-
+        score = 0;
         numberOfElements = numColumns * numRows;
+
+        pScore = (TextView) findViewById(R.id.playerScore);
+        pScore.setText("Score: " + getScore());
 
         buttons = new MemoryButton[numberOfElements];
 
@@ -76,7 +80,7 @@ public class game2x4 extends AppCompatActivity implements View.OnClickListener {
         for(int i = 0; i < numberOfElements; i++){
             int temp = buttonGraphicLocations[i];
 
-            int swapIndex = rand.nextInt(6);
+            int swapIndex = rand.nextInt(8);
 
             buttonGraphicLocations[i] = buttonGraphicLocations[swapIndex];
 
@@ -116,6 +120,7 @@ public class game2x4 extends AppCompatActivity implements View.OnClickListener {
             score = score +2;
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
+            pScore.setText("Score: " + getScore());
             nullcount = nullcount +2;
             selectedButton1 = null;
             if (nullcount == 8){
@@ -131,8 +136,10 @@ public class game2x4 extends AppCompatActivity implements View.OnClickListener {
             selectedButton2.flip();
             isBusy = true;
             if (score > 0){
-                score = score - 1;
+                score = score -1;
+                pScore.setText("Score: " + getScore());
             }
+
             final Handler handler = new Handler();
 
             handler.postDelayed(new Runnable() {
