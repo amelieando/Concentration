@@ -27,7 +27,7 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game4x4);
+        setContentView(R.layout.activity_game2x2);
 
         GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x2);
 
