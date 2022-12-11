@@ -10,7 +10,7 @@ import android.os.Handler;
 import java.util.Random;
 
 public class game2x7 extends AppCompatActivity implements View.OnClickListener {
-
+    private int score;
     private int numberOfElements;
 
     private MemoryButton[] buttons;
@@ -110,7 +110,7 @@ public class game2x7 extends AppCompatActivity implements View.OnClickListener {
 
             button.setMatched(true);
             selectedButton1.setMatched(true);
-
+            score = score +2;
             //selectedButton1.setEnabled(false);
             //selectedButton2.setEnabled(false);
 
@@ -124,7 +124,9 @@ public class game2x7 extends AppCompatActivity implements View.OnClickListener {
             selectedButton2 = button;
             selectedButton2.flip();
             isBusy = true;
-
+            if (score > 0){
+                score = score -1;
+            }
             final Handler handler = new Handler();
 
             handler.postDelayed(new Runnable() {

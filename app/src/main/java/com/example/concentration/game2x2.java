@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     private int numberOfElements;
-
+    private int score;
     private MemoryButton[] buttons;
 
     private int[] buttonGraphicLocations;
@@ -105,7 +105,7 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
 
             button.setMatched(true);
             selectedButton1.setMatched(true);
-
+            score = score +2;
 
 
             selectedButton1 = null;
@@ -118,7 +118,9 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
             selectedButton2 = button;
             selectedButton2.flip();
             isBusy = true;
-
+            if (score > 0){
+                score = score -1;
+            }
             final Handler handler = new Handler();
 
             handler.postDelayed(new Runnable() {
