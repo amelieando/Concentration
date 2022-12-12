@@ -1,11 +1,15 @@
 package com.example.concentration;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridLayout;
 import android.os.Handler;
 import android.widget.TextView;
@@ -25,6 +29,10 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
 
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
+    private Button saveBtn;
+    private EditText et;
+
+    SharedPreferences sharedPreferences;
 
     private boolean isBusy = false;
     private int getScore(){
@@ -35,6 +43,9 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game2x2);
+
+        saveBtn = (Button) findViewById(R.id.saveButton);
+        et = (EditText) findViewById(R.id.enterName);
 
         GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x2);
 
@@ -56,6 +67,13 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
         buttonGraphicLocations = new int[numberOfElements];
 
         shuffleButtonGraphics();
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity2();
+            }
+        });
 
         for (int r = 0; r < numRows; r++) {
             for (int c = 0; c < numColumns; c++) {
@@ -123,7 +141,8 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
 
             selectedButton1 = null;
             if (nullcount == 4){
-                openActivity1();
+                saveBtn.setVisibility(View.VISIBLE);
+                et.setVisibility(View.VISIBLE);
             }
 
 
@@ -156,6 +175,20 @@ public class game2x2 extends AppCompatActivity implements View.OnClickListener {
     }
     public void openActivity1() {
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void openActivity2(){
+        EditText editText1 = (EditText) findViewById(R.id.enterName);
+        TextView sResult = (TextView) findViewById(R.id.playerScore);
+
+        sharedPreferences = getSharedPreferences("SaveData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("Name", editText1.getText().toString());
+        editor.putString("Score", sResult.getText().toString());
+        editor.apply();
+
+        Intent intent = new Intent(getApplicationContext(), Highscore.class);
         startActivity(intent);
     }
 }

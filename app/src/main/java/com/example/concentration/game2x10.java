@@ -24,20 +24,21 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
 
     private int[] buttonGraphicLocations;
     private int[] buttonGraphics;
+
     private Button saveBtn;
     private EditText et;
+    SharedPreferences sharedPreferences;
 
     TextView pScore;
 
     private MemoryButton selectedButton1;
     private MemoryButton selectedButton2;
 
-    SharedPreferences sharedPreferences;
-
     private boolean isBusy = false;
     private int getScore(){
         return score;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +46,13 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
 
         saveBtn = (Button) findViewById(R.id.saveButton);
         et = (EditText) findViewById(R.id.enterName);
+
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openActivity2();
+            }
+        });
 
         GridLayout gridLayout = (GridLayout) findViewById(R.id.Game2x10);
 
@@ -74,13 +82,6 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
         buttonGraphicLocations = new int[numberOfElements];
 
         shuffleButtonGraphics();
-
-        saveBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity2();
-            }
-        });
 
         for (int r = 0; r < numRows; r++) {
             for (int c = 0; c < numColumns; c++) {
@@ -196,9 +197,6 @@ public class game2x10 extends AppCompatActivity implements View.OnClickListener 
         editor.apply();
 
         Intent intent = new Intent(getApplicationContext(), Highscore.class);
-        //intent.putExtra("NAME", text);
-        //intent.putExtra("SCORE", scoreResult);
-
         startActivity(intent);
     }
 }
